@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PRISON ENTRY</title>
+	<link rel="stylesheet" type="text/css" href="Admission.css">
+	<script type="text/javascript" src="admission.js"></script>
+</head>
+<body>
+	<div class="box">
+		<h3>PRISON ENTRY</h3>
+<form name="prison_form" action="insert.php" method="POST">
+	 <input type="name" id="id" name="prisoner_id" placeholder="PRISONER-ID" required="" >
+	 <input type="name" id="name" name="prisoner_name" placeholder="PRISONER-NAME" required="" >
+	  <input type="name" id="case_no" name="case_no" placeholder="PRISONER-CASE" required="" >
+	 <input type="date" id="number" name="date_arrest" placeholder="date_arrest" required="">
+	 <input type="date" id="number" name="date_release" placeholder="date_release" required="">
+	 <input type="Submit" name="submit" onclick="msg1();msg2()">
+</form>
+</div>
+</body>
+</html>
