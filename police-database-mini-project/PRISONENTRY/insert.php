@@ -5,9 +5,9 @@ error_reporting(E_ALL);
 
 session_start();
 
-$conn=mysqli_connect('localhost','root','');
+$con=mysqli_connect('localhost','root','');
 
-mysqli_select_db($conn,'police');
+mysqli_select_db($con,'police');
 
 
 $prisoner_name=$_POST['prisoner_name'];
@@ -25,11 +25,11 @@ $sql="insert into prison(prisoner_name,case_no,date_arrest,date_release) values(
 echo "reg";
 //print_r($reg);
 
-if (mysqli_query($conn, $sql)) {
-  $last_id = mysqli_insert_id($conn);
+if (mysqli_query($con, $sql)) {
+  $last_id = mysqli_insert_id($con);
   echo "New record created successfully. Last inserted ID is: " . $last_id;
 } else {
-  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+  echo "Error: " . $sql . "<br>" . mysqli_error($con);
 }
 
 ?>
